@@ -1,0 +1,8 @@
+<webDriverSettings>
+      <browser>
+        <type>Firefox</type>
+      </browser>
+      <url>
+        <base>http://www.google.com</base>
+      </url>
+    </webDriverSettings>
