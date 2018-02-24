@@ -63,14 +63,13 @@ namespace SeleniumTests
             //System.Console.WriteLine("Page title is: " + driver.Title);
             Assert.IsTrue(driver.Title == "Cheese - Google Search");
 
-            Thread.Sleep(5000);
-            
             // take a snapshot
             WebDriverScreenShotTaker.TakeScreenshot(driver);
         }
 
 
         [Test]
+        [Category("Ham")]
         public void Assert_Ham_Search()
         {
             Logger.Log("Navigating to page " + baseURL);
@@ -90,11 +89,9 @@ namespace SeleniumTests
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until((d) => { return d.Title.ToLower().StartsWith("ham"); });
 
-            // Should see: "Cheese - Google Search"
+            // Should see: "Ham - Google Search"
             //System.Console.WriteLine("Page title is: " + driver.Title);
             Assert.IsTrue(driver.Title == "Ham - Google Search");
-
-            Thread.Sleep(5000);
 
             // take a snapshot
             WebDriverScreenShotTaker.TakeScreenshot(driver);
