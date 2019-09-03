@@ -21,15 +21,15 @@ namespace SeleniumTests.utils
             switch (browserType)
             {
                 case "Firefox":
-                    DesiredCapabilities capabilites = DesiredCapabilities.Firefox();
-                    var opts = new FirefoxOptions();
+                    //DesiredCapabilities capabilites = DesiredCapabilities.Firefox();
+                    //var opts = new FirefoxOptions();
                     //opts.UseLegacyImplementation = true;
-                    driver = new FirefoxDriver(opts);
+                    driver = new FirefoxDriver();
                     break;
                 case "Chrome":
                     var options = new ChromeOptions();
                     options.AddArgument("start-maximized");
-                    driver = new ChromeDriver(options);
+                    driver = new ChromeDriver();
                     break;
                 case "IE":
                     var ieOptions = new InternetExplorerOptions
